@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:background="#FFFFFF">
+    
+   
+    
+    <TextView
+        android:id="@+id/textView4"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginBottom="25.0dp"
+        android:layout_below="@+id/subtitle_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_subtitle_desc"/>
+    
+    <RelativeLayout
+        android:id="@+id/skip_holder"
+        android:layout_below="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_skip"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold" />
+        
+        <TextView
+            android:id="@+id/setting_skip_value"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/setting_skip_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:max="60"
+            android:layout_below="@+id/textView2" />
+
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/textView5"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginBottom="25.0dp"
+        android:layout_below="@+id/skip_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_skip_desc"/>
+    
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginBottom="25.0dp"
+        android:layout_below="@+id/speed_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_playback_speed_desc"/>
+    
+</RelativeLayout>
