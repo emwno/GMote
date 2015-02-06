@@ -4,6 +4,11 @@ This is one of the winning applications of the LG QPair Contest held at XDA-Deve
   <p>You can read about the contest here.</p>
 </a>
 
+<a href="http://forum.xda-developers.com/lg-g-pad-83/orig-development/project-gmote-t2924232">
+  <p>XDA Development Thread</p>
+</a>
+
+
 
 #The Nitty Gritty
 GMote depends on some libraries. Each of which, along with it's function in this project and links for download are defined below:
