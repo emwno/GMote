@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- Your normal content view -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- We use a Toolbar so that our drawer can be displayed
+             in front of the action bar -->
+        <android.support.v7.widget.Toolbar  
+            android:id="@+id/toolbar"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_above="@+id/remote_holder"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/primary" >
+            
+            <include layout="@layout/remote_info"/>
+         
+        </android.support.v7.widget.Toolbar>
+        
+        <SeekBar
+            android:layout_margin="8dp"
+            android:layout_above="@+id/playback_holder"
+            android:id="@+id/seek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        
+        <include
+            android:id="@+id/remote_holder"
+            layout="@layout/remote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+        
+        <RelativeLayout
+            android:id="@+id/playback_holder"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignBottom="@+id/toolbar"
+            android:orientation="horizontal"
+            android:layout_marginBottom="-32dp" >
+                    
+            <com.gc.materialdesign.views.ButtonFloat
+                android:id="@+id/play"
+                android:onClick="onClick"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/secondary"/>
+
+            <com.gc.materialdesign.views.ButtonFloat
+                android:id="@+id/skip_next"
+                android:onClick="onClick"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/secondary"/>
+        
+            <com.gc.materialdesign.views.ButtonFloat
+                android:id="@+id/skip_previous"
+                android:onClick="onClick"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignParentLeft="true"
+                android:background="@color/secondary"/>
+                    
+        </RelativeLayout>
+        
+        <TextView
+            android:gravity="center"
+            android:id="@+id/video_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:fontFamily="sans-serif-light"
+            android:shadowColor="@color/secondary"
+            android:layout_above="@+id/view1"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="1.0"
+            android:text="00:00"
+            android:textSize="70.0sp" />
+
+        <View
+            android:background="@color/primary"
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerInParent="true"/>
+        
+        <TextView
+            android:layout_toRightOf="@+id/video_position"
+            android:id="@+id/video_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="00:00"
+            android:textColor="@color/secondary"
+            android:textSize="20.0sp" />
+ 
+    </RelativeLayout>
+
+    <!-- Your drawer view. This can be any view, LinearLayout
+         is just an example. As we have set fitSystemWindows=true
+         this will be displayed under the status bar. -->
+    <FrameLayout
+        android:id="@+id/drawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:fitsSystemWindows="true">
+
+        <!-- Your drawer content -->
+
+    </FrameLayout>
+
+</android.support.v4.widget.DrawerLayout>

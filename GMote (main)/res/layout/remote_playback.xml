@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/header"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/body"
+        android:layout_height="match_parent"
+    />
+
+   <FrameLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:minHeight="100dp"
+            android:layout_alignParentBottom="true"/>
+
+    <Buttom
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/header"
+        android:layout_marginBottom="-32dp"
+        android:layout_marginRight="20dp"
+    />
+    
+    <IconButton
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_alignBottom="@id/header"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:gravity="center"
+            android:layout_marginBottom="-32dp"
+            android:text="{fa-play}"
+            android:textSize="20.0dip" />
+
+        <IconButton
+            android:id="@+id/skip_next"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_alignBottom="@id/header"
+            android:layout_marginBottom="-32dp"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:text="{fa-step-forward}"
+            android:textSize="20.0dip" />
+        
+                <IconButton
+                    android:id="@+id/skip_previous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_alignBottom="@id/header"
+                    android:layout_marginBottom="-32dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@null"
+                    android:text="{fa-step-backward}"
+                    android:textSize="20.0dip" />
+
+</RelativeLayout>
